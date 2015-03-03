@@ -9,6 +9,8 @@ Put the Drawable String you want:
 mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, <YOUR DRAWABLE STRING NAME>);
 ```
 
+Application Sample: https://github.com/franzejr/Pull-to-Refresh.Rentals-Android/tree/master/PullRefreshExample
+
 
 
 # Pull-to-Refresh.Rentals-Android

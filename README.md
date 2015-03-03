@@ -1,3 +1,14 @@
+
+This is a fork from https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android. Here we can pass a simple Drawable and make an animation with that Drawable.
+
+
+### Usage
+
+Put the Drawable String you want:
+mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, <YOUR DRAWABLE STRING NAME>);
+
+
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Pull--to--Refresh.Rentals--Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1386)
 
 # Pull-to-Refresh.Rentals-Android

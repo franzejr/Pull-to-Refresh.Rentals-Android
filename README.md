@@ -1,4 +1,15 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Pull--to--Refresh.Rentals--Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1386)
+
+This is a fork from https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android. Here we can pass a simple Drawable and make an animation with that Drawable. Basically, It spins any image.
+
+
+### Usage
+
+Put the Drawable String you want:
+```java
+mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, <YOUR DRAWABLE STRING NAME>);
+```
+
+
 
 # Pull-to-Refresh.Rentals-Android
 
@@ -6,8 +17,6 @@ This project aims to provide a simple and customizable pull to refresh implement
 
 Check this [project on Dribbble] (https://dribbble.com/shots/1650317-Pull-to-Refresh-Rentals)  
 Check this [project on Behance] (https://www.behance.net/gallery/20411445/Mobile-Animations-Interactions)  
-
-<img src="https://d13yacurqjgara.cloudfront.net/users/125056/screenshots/1650317/realestate-pull_1-2-3.gif" alt="alt text" style="width:200;height:200">
 
 #Usage
 
@@ -50,18 +59,6 @@ Check this [project on Behance] (https://www.behance.net/gallery/20411445/Mobile
         }
      });
      ```
-
-#Customization
-
-There is one attribute which applicable to `PullToRefreshView`.
-
-   * `type` type of refresh animation
-   * You can also set this attribute from your java code by calling `setRefreshStyle(int type)`
-
-To customize drawables you can change:
-   * sun.png - Sun image
-   * sky.png - background image
-   * buildings.png - foreground image
 
 # Misc
 If you need to change progress state:

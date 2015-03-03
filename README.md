@@ -5,7 +5,9 @@ This is a fork from https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android.
 ### Usage
 
 Put the Drawable String you want:
+```java
 mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, <YOUR DRAWABLE STRING NAME>);
+```
 
 
 

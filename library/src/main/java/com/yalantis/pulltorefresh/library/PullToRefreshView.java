@@ -21,6 +21,7 @@ import com.yalantis.pulltorefresh.library.refresh_view.BaseRefreshView;
 import com.yalantis.pulltorefresh.library.refresh_view.SunRefreshView;
 import com.yalantis.pulltorefresh.library.util.Utils;
 
+import java.lang.String;
 import java.security.InvalidParameterException;
 
 public class PullToRefreshView extends ViewGroup {
@@ -31,6 +32,7 @@ public class PullToRefreshView extends ViewGroup {
 
     public static final int STYLE_SUN = 0;
     public static final int STYLE_JET = 1;
+    public static final int STYLE_CUSTOM = 2;
     public static final int MAX_OFFSET_ANIMATION_DURATION = 700;
 
     private static final int INVALID_POINTER = -1;
@@ -51,6 +53,7 @@ public class PullToRefreshView extends ViewGroup {
     private float mFromDragPercent;
     private boolean mNotify;
     private OnRefreshListener mListener;
+    private String customImageName;
 
     public PullToRefreshView(Context context) {
         this(context, null);
@@ -84,12 +87,20 @@ public class PullToRefreshView extends ViewGroup {
                 break;
             case STYLE_JET:
                 // TODO
-            case SIMPLE_DRAWABLE:
-                mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, "ic_launchers");
+            case STYLE_CUSTOM:
+                mBaseRefreshView = new SimpleDrawableRefresh(getContext(), this, getCustomImageName());
             default:
                 throw new InvalidParameterException("Type does not exist");
         }
         mRefreshView.setImageDrawable(mBaseRefreshView);
+    }
+
+    public String getCustomImageName() {
+        return customImageName;
+    }
+
+    public void setCustomImageName(String customImageName) {
+        this.customImageName = customImageName;
     }
 
     public int getTotalDragDistance() {
